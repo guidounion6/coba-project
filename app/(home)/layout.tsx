@@ -12,9 +12,8 @@ export const metadata: Metadata = {
 const HomeLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     return (
         <main className="relative">
-            <NavBar />
              <div className="flex">
-                <section className="flex min-h-screen flex-1 flex-col ">
+                <section className="flex min-h-screen flex-1 flex-col max-md:pb-14   ">
                     <div className="w-full">
                         {children}
                     </div>

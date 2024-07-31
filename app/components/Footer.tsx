@@ -2,7 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <section className='w-full h-[200px] bg-slate-600'>
+
+    </section>
   )
 }
 

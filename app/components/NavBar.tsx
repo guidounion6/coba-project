@@ -1,12 +1,36 @@
 import React from 'react'
+import NavLink from '../UI/NavLink'
+import Image from 'next/image'
+
+import CorpLogo from "../../public/assets/img/Logos/Corp-Logo.png"
 
 const NavBar = () => {
   return (
-    <nav className="bg-transparent relative">
-      <div className="max-w-7xl min-h-[100vh] mx-auto flex justify-center items-center bh">
-        <div className='w-full'>
-          <video src="../assets/Video.mp4" width="1280" height="720" autoPlay controls>
-         </video>
+    <nav className="bg-transparent w-full top-0 left-0 z-10 flex absolute">   
+      <div className="max-w-7xl min-h-[35vh] mx-auto flex justify-center items-center align-center">
+        <div className='w-full h-full flex flex-1 justify-between items-center'>
+          <div className='flex px-2'>
+            <NavLink text="Seccion 1" />
+            <NavLink text="Seccion 2" />
+            <NavLink text="Seccion 3" />
+            <NavLink text="Seccion 4" />
+          </div>
+
+          
+            <Image  
+            src={CorpLogo}
+            alt="coba-logo"
+            height={200}
+            width={200}
+            className='mx-2'
+            />
+          
+          
+          <div>
+            <NavLink text="Contacto" />
+            <NavLink text="Empresas" />
+          </div>
+
         </div>
       </div>
     </nav>
