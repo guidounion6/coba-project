@@ -10,7 +10,7 @@ const Empresas = () => {
   const pathname = usePathname()
 
   return (
-    <section className='w-full h-[100vh] my-2'>
+    <section  id="empresas" className='w-full h-[100vh]'>
       <div className='flex flex-col w-full h-full relative object-cover'>
         <div className='z-10 text-black p-5 w-full h-full flex items-center justify-center font-bold '>
           <h2 className='text-8xl p-5 text-shadow '>Nuestras Empresas</h2>

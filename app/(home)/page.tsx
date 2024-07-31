@@ -20,26 +20,33 @@ const HomePage = () => {
           <Hero />
         </div>
         <HomeCard
-          titulo="¿Qué es el Covid-19?"
+          titulo="¿Seccion 1?"
           subtitulo="El COVID-19 es una enfermedad respiratoria causada por un nuevo coronavirus."
           parrafo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque provident magnam, iusto suscipit eius sint fuga corrupti impedit velit tempora, dicta delectus pariatur quo unde dignissimos enim excepturi quam."
           imagen={Fondo1}
+          id="seccion1"
         />
         <HomeCard
-          titulo="¿Qué es el Covid-19?"
+          titulo="¿Seccion 2?"
           subtitulo="El COVID-19 es una enfermedad respiratoria causada por un nuevo coronavirus."
           parrafo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque provident magnam, iusto suscipit eius sint fuga corrupti impedit velit tempora, dicta delectus pariatur quo unde dignissimos enim excepturi quam."
-          imagen={Fondo2} />
+          imagen={Fondo2} 
+          id="seccion2"
+          />
         <HomeCard
-          titulo="¿Qué es el Covid-19?"
+          titulo="¿Seccion 3?"
           subtitulo="El COVID-19 es una enfermedad respiratoria causada por un nuevo coronavirus."
           parrafo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque provident magnam, iusto suscipit eius sint fuga corrupti impedit velit tempora, dicta delectus pariatur quo unde dignissimos enim excepturi quam."
-          imagen={Fondo3} />
+          imagen={Fondo3} 
+          id="seccion3"
+          />
         <HomeCard
-          titulo="¿Qué es el Covid-19?"
+          titulo="¿Seccion 4?"
           subtitulo="El COVID-19 es una enfermedad respiratoria causada por un nuevo coronavirus."
           parrafo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque provident magnam, iusto suscipit eius sint fuga corrupti impedit velit tempora, dicta delectus pariatur quo unde dignissimos enim excepturi quam."
-          imagen={Fondo4} />
+          imagen={Fondo4} 
+          id="seccion4"
+          />
         <Empresas />
         <Contact />
       </div>

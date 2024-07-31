@@ -10,10 +10,10 @@ const NavBar = () => {
       <div className="max-w-7xl min-h-[35vh] mx-auto flex justify-center items-center align-center">
         <div className='w-full h-full flex flex-1 justify-between items-center'>
           <div className='flex px-2'>
-            <NavLink text="Seccion 1" />
-            <NavLink text="Seccion 2" />
-            <NavLink text="Seccion 3" />
-            <NavLink text="Seccion 4" />
+            <NavLink text="Seccion 1" link="#seccion1"/>
+            <NavLink text="Seccion 2" link="#seccion2"/>
+            <NavLink text="Seccion 3" link="#seccion3"/>
+            <NavLink text="Seccion 4" link="#seccion4"/>
           </div>
 
           
@@ -27,8 +27,8 @@ const NavBar = () => {
           
           
           <div>
-            <NavLink text="Contacto" />
-            <NavLink text="Empresas" />
+            <NavLink text="Contacto" link="#contacto"/>
+            <NavLink text="Empresas" link="#empresas" />
           </div>
 
         </div>

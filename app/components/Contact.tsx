@@ -50,8 +50,8 @@ const Contact = () => {
     }
   };
   return (
-    <section className="h-[100vh] w-full bg-[url(/assets/img/Fondos/Fondo6.jpg)] bg-cover">
-      <div className='flex w-full h-full justify-center items-center '>
+    <section  className="h-[100vh] w-full bg-[url(/assets/img/Fondos/Fondo6.jpg)] bg-cover" id="contacto">
+      <div className='flex w-full h-full justify-center items-center' >
         <div className='w-1/2 h-full backdrop-blur-lg rounded-md flex flex-col items-center justify-between pt-6 '>
           <Formik
             initialValues={{ name: "", email: "", asunto: "", mensaje: "" }}
@@ -124,7 +124,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="w-1/3 h-auto items-center text-center bg-white"
+                    className=" h-auto min-w-auto items-center text-center bg-white px-2"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Enviando Mensaje..." : "Enviar Mensaje"}
