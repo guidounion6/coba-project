@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
+import Swal from "sweetalert2"
 
 
 
@@ -40,11 +41,29 @@ const Contact = () => {
   const handleSubmit = async (values: ContactFormValues, { setSubmitting }: { setSubmitting: SetSubmitting }) => {
     try {
       setSubmitting(true);
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setMessage("Mensaje Enviado");
+  
+      const response = await fetch('https://formsubmit.co/guidocontartese90@gmail.com', {
+        method: 'POST',
+        body: JSON.stringify(values),
+      });
+  
+      if (response.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: '¡Correo enviado con éxito!',
+          text: 'Tu mensaje ha sido enviado correctamente.',
+        });
+       
+      } else {
+        throw new Error('Error al enviar el mensaje');
+      }
     } catch (error) {
       console.log("Error al enviar el mensaje", error);
-      setMessage("Error al enviar el mensaje, revisa los campos e intenta nuevamente");
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Error al enviar el mensaje, revisa los campos e intenta nuevamente.',
+      });
     } finally {
       setSubmitting(false);
     }
@@ -52,7 +71,7 @@ const Contact = () => {
   return (
     <section  className="h-[100vh] w-full bg-[url(/assets/img/Fondos/Fondo5.jpg)] bg-cover" id="contacto">
       <div className='flex w-full h-full justify-center items-center' >
-        <div className='w-1/2 h-full backdrop-blur-lg rounded-md flex flex-col items-center justify-between pt-6 '>
+        <div className='w-1/2 h-full backdrop-blur-lg rounded-md flex flex-col  justify-between pt-6 '>
           <Formik
             initialValues={{ name: "", email: "", asunto: "", mensaje: "" }}
             validationSchema={ContactSchema}
@@ -71,7 +90,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="mt-1 block w-full"
+                    className="mt-1 block w-full px-1"
                   />
                   <ErrorMessage name="name" component="span" className="text-red-500 text-lg" />
                 </div>
@@ -86,7 +105,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="mt-1 block w-full"
+                    className="mt-1 block w-full px-1"
                   />
                   <ErrorMessage name="email" component="div" className="text-red-500 text-lg" />
                 </div>
@@ -101,7 +120,7 @@ const Contact = () => {
                     type="text"
                     id="asunto"
                     name="asunto"
-                    className="mt-1 block w-full"
+                    className="mt-1 block w-full px-1"
                   />
                   <ErrorMessage name="asunto" component="div" className="text-red-500 text-lg" />
                 </div>
@@ -116,7 +135,7 @@ const Contact = () => {
                     type="text"
                     id="mensaje"
                     name="mensaje"
-                    className="mt-1 block w-full h-[100px]"
+                    className="mt-1 block w-full h-[100px] px-1"
                   />
                   <ErrorMessage name="mensaje" component="div" className="text-red-500 text-lg" />
                 </div>

@@ -22,7 +22,7 @@ const NavBar = () => {
             alt="coba-logo"
             height={200}
             width={200}
-            className='mx-2'
+            className='mx-2 bg-white px-2'
             />
           
           

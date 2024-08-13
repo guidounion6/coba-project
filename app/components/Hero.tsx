@@ -5,7 +5,7 @@ import NextVideo from 'next-video';
 import video2 from "../../videos/video5.mp4"
 import Loader from './Loader';
 import HomeCard from "./HomeCard";
-import FondoHero from "../../public/assets/img/Fondos/Najuma1.jpg"
+import FondoHero from "../../public/assets/img/Fondos/Toma Aerea.jpg"
 
 const Hero = () => {
   const [isLoading, setIsLoading] = useState(false);

@@ -23,7 +23,7 @@ const Empresas = () => {
               <Link
                 href={item.route}
                 key={item.label}
-                className={cn("flex gap-4 items-center p-4 rounded-lg justify-start z-10 bg-white mb-2", {
+                className={cn("flex gap-4 items-center p-4 justify-start z-10 bg-white mb-2", {
                   "bg-red-500": isActive}
                 )}
               >
