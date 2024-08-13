@@ -50,7 +50,7 @@ const Contact = () => {
     }
   };
   return (
-    <section  className="h-[100vh] w-full bg-[url(/assets/img/Fondos/Fondo6.jpg)] bg-cover" id="contacto">
+    <section  className="h-[100vh] w-full bg-[url(/assets/img/Fondos/Fondo5.jpg)] bg-cover" id="contacto">
       <div className='flex w-full h-full justify-center items-center' >
         <div className='w-1/2 h-full backdrop-blur-lg rounded-md flex flex-col items-center justify-between pt-6 '>
           <Formik
@@ -63,7 +63,7 @@ const Contact = () => {
                 <div className='flex flex-col p-4 min-w-[400px]'>
                   <label
                     htmlFor="name"
-                    className='block text-xl font-semibold mb-1 text-center'
+                    className='block text-xl font-semibold mb-1'
                   >
                     Nombre
                   </label>
@@ -93,7 +93,7 @@ const Contact = () => {
                 <div className='flex flex-col p-5 min-w-[400px]'>
                   <label
                     htmlFor="asunto"
-                    className='block text-xl font-semibold mb-1 text-center'
+                    className="block text-xl font-semibold mb-1"
                   >
                     Asunto
                   </label>
@@ -108,7 +108,7 @@ const Contact = () => {
                 <div className='flex flex-col p-5 min-w-[400px]'>
                   <label
                     htmlFor="mensaje"
-                    className='block text-xl font-semibold mb-1 text-center'
+                    className='block text-xl font-semibold mb-1'
                   >
                     Mensaje
                   </label>
@@ -124,7 +124,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className=" h-auto min-w-auto items-center text-center bg-white px-2"
+                    className=" h-auto min-w-auto items-center text-center bg-white px-2 hover:bg-gray-300"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Enviando Mensaje..." : "Enviar Mensaje"}

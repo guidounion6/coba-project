@@ -6,13 +6,13 @@ import CorpLogo from "../../public/assets/img/Logos/Corp-Logo.png"
 
 const NavBar = () => {
   return (
-    <nav className="bg-transparent w-full top-0 left-0 z-10 flex absolute">   
+    <nav className="bg-transparent w-full top-0 left-0 z-10 flex absolute z-1">   
       <div className="max-w-7xl min-h-[35vh] mx-auto flex justify-center items-center align-center">
         <div className='w-full h-full flex flex-1 justify-between items-center'>
           <div className='flex px-2'>
-            <NavLink text="Seccion 1" link="#seccion1"/>
-            <NavLink text="Seccion 2" link="#seccion2"/>
-            <NavLink text="Seccion 3" link="#seccion3"/>
+            <NavLink text="Visión" link="#seccion1"/>
+            <NavLink text="Misión" link="#seccion2"/>
+            <NavLink text="Valores" link="#seccion3"/>
             <NavLink text="Seccion 4" link="#seccion4"/>
           </div>
 
