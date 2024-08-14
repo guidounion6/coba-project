@@ -13,10 +13,9 @@ const NavBar = () => {
             <NavLink text="Visión" link="#seccion1"/>
             <NavLink text="Misión" link="#seccion2"/>
             <NavLink text="Valores" link="#seccion3"/>
-            <NavLink text="Seccion 4" link="#seccion4"/>
+            <NavLink text="Innovación" link="#seccion4"/>
           </div>
 
-          
             <Image  
             src={CorpLogo}
             alt="coba-logo"
@@ -24,7 +23,6 @@ const NavBar = () => {
             width={200}
             className='mx-2 bg-white px-2'
             />
-          
           
           <div>
             <NavLink text="Contacto" link="#contacto"/>

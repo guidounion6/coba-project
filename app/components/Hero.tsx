@@ -4,8 +4,9 @@ import React, { useState, useEffect } from 'react';
 import NextVideo from 'next-video';
 import video2 from "../../videos/video5.mp4"
 import Loader from './Loader';
-import HomeCard from "./HomeCard";
-import FondoHero from "../../public/assets/img/Fondos/Toma Aerea.jpg"
+
+import FondoHero from "../../public/assets/img/Fondos/Teramal.jpeg"
+import Image from "next/image";
 
 const Hero = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,12 +23,10 @@ const Hero = () => {
           controls={false}
           className='w-full h-full object-cover'
         /> */}
-        <HomeCard 
-        id=""
-        titulo=""
-        subtitulo=""
-        parrafo=""
-        imagen={FondoHero}
+        <Image 
+        alt="el fondo del hero, un deposito de papa refrigerado vista desde el aire"
+        src={FondoHero}
+        layout="fill"
         />
     </div>
   );
