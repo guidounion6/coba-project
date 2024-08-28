@@ -1,8 +1,9 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import Swal from "sweetalert2"
+import * as emailjs from 'emailjs-com'
 
 
 
@@ -20,7 +21,7 @@ const ContactSchema = Yup.object().shape({
     .min(3, 'Debe contener al menos 3 caracteres de largo')
     .max(50, "El asunto no debe superar los 50 caracteres")
     .required("Campo oblitagorio"),
-  mensaje: Yup.string()
+  message: Yup.string()
     .min(10, 'Debe contener al menos 10 caracteres de largo')
     .max(100, "El nombre no debe superar los 100 caracteres")
     .required("Campo oblitagorio")
@@ -30,7 +31,7 @@ interface ContactFormValues {
   name: string;
   email: string;
   asunto: string;
-  mensaje: string;
+  message: string;
 }
 
 type SetSubmitting = (isSubmitting: boolean) => void
@@ -41,19 +42,20 @@ const Contact = () => {
   const handleSubmit = async (values: ContactFormValues, { setSubmitting }: { setSubmitting: SetSubmitting }) => {
     try {
       setSubmitting(true);
-  
-      const response = await fetch('https://formsubmit.co/guidocontartese90@gmail.com', {
-        method: 'POST',
-        body: JSON.stringify(values),
+
+      const response = await emailjs.send("service_dnk1x5m", "template_xhf8zto", {
+        message: "values.mensaje",
+        name: "guido",
+        email: "guidocontartese90@gmail.com",
       });
-  
-      if (response.ok) {
+
+      if (response) {
         Swal.fire({
           icon: 'success',
           title: '¡Correo enviado con éxito!',
           text: 'Tu mensaje ha sido enviado correctamente.',
         });
-       
+
       } else {
         throw new Error('Error al enviar el mensaje');
       }
@@ -68,12 +70,16 @@ const Contact = () => {
       setSubmitting(false);
     }
   };
+
+  useEffect(() => {
+  }, [])
+
   return (
-    <section  className="h-[100vh] w-full bg-[url(/assets/img/Fondos/Fondo5.jpg)] bg-cover" id="contacto">
+    <section className="h-[100vh] w-full bg-[url(/assets/img/Fondos/Fondo5.jpg)] bg-cover" id="contacto">
       <div className='flex w-full h-full justify-center items-center' >
-        <div className='w-1/2 h-full backdrop-blur-lg rounded-md flex flex-col  justify-between pt-6 '>
+        <div className='w-1/2 h-full backdrop-blur-lg rounded-md flex flex-col justify-between pt-6 text-start'>
           <Formik
-            initialValues={{ name: "", email: "", asunto: "", mensaje: "" }}
+            initialValues={{ name: "", email: "", asunto: "", message: "" }}
             validationSchema={ContactSchema}
             onSubmit={handleSubmit}
           >
@@ -84,7 +90,7 @@ const Contact = () => {
                     htmlFor="name"
                     className='block text-xl font-semibold mb-1'
                   >
-                    Nombre
+                    Nombre:
                   </label>
                   <Field
                     type="text"
@@ -99,7 +105,7 @@ const Contact = () => {
                     htmlFor="email"
                     className='block text-xl font-semibold mb-2'
                   >
-                    Email: 
+                    Email:
                   </label>
                   <Field
                     type="email"
@@ -114,7 +120,7 @@ const Contact = () => {
                     htmlFor="asunto"
                     className="block text-xl font-semibold mb-1"
                   >
-                    Asunto
+                    Asunto:
                   </label>
                   <Field
                     type="text"
@@ -126,18 +132,18 @@ const Contact = () => {
                 </div>
                 <div className='flex flex-col p-5 min-w-[400px]'>
                   <label
-                    htmlFor="mensaje"
+                    htmlFor="message"
                     className='block text-xl font-semibold mb-1'
                   >
-                    Mensaje
+                    Mensaje:
                   </label>
                   <Field
                     type="text"
-                    id="mensaje"
-                    name="mensaje"
+                    id="message"
+                    name="message"
                     className="mt-1 block w-full h-[100px] px-1"
                   />
-                  <ErrorMessage name="mensaje" component="div" className="text-red-500 text-lg" />
+                  <ErrorMessage name="message" component="div" className="text-red-500 text-lg" />
                 </div>
                 <div className='flex items-center justify-center'>
 
