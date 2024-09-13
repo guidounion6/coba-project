@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 import { navLinks } from '../const/navlinks'
-import FondoEmpresas from "../../public/assets/img/Fondos/TransporteCoba.jpg"
+import FondoEmpresas from "../../public/assets/img/Fondos/Najuma.jpg"
 
 const Empresas = () => {
   const pathname = usePathname()
@@ -14,7 +14,7 @@ const Empresas = () => {
     <section  id="empresas" className='w-full h-[100vh]'>
       <div className='flex flex-col w-full h-full relative object-cover'>
         <div className='z-10 text-black p-5 w-full h-full flex items-center justify-center font-bold '>
-          <h2 className='text-8xl p-5 text-shadow text-black'>Nuestras Empresas</h2>
+          <h2 className='text-8xl p-5 text-shadow text-white'>Nuestras Empresas</h2>
         </div>
         <div className='flex flex-1 h-full w-full items-start justify-evenly'>
           {navLinks.map((item) => {
@@ -23,7 +23,7 @@ const Empresas = () => {
               <Link
                 href={item.route}
                 key={item.label}
-                className={cn("flex gap-4 items-center p-4 justify-start z-10 bg-white mb-2", {
+                className={cn("flex gap-4 items-center p-4 justify-start z-10 bg-transparent mb-2", {
                   "bg-red-500": isActive}
                 )}
               >
