@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 import { navLinks } from '../const/navlinks'
-import FondoEmpresas from "../../public/assets/img/Fondos/Najuma.jpg"
+import FondoEmpresas from "../../public/assets/img/Fondos/Najuma.JPG"
 
 const Empresas = () => {
   const pathname = usePathname()
