@@ -77,7 +77,7 @@ const Contact = () => {
   return (
     <section className="h-[100vh] w-full bg-[url(/assets/img/Fondos/Fondo5.jpg)] bg-cover" id="contacto">
       <div className='flex w-full h-full justify-center items-center' >
-        <div className='w-1/2 h-full backdrop-blur-lg rounded-md flex flex-col justify-between pt-6 text-start'>
+        <div className='w-1/2 h-full backdrop-blur-lg rounded-md flex flex-col justify-center text-start'>
           <Formik
             initialValues={{ name: "", email: "", asunto: "", message: "" }}
             validationSchema={ContactSchema}

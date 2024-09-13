@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import HomeCard from '../components/HomeCard'
 import Contact from '../components/Contact'
 import NavBar from '../components/NavBar'
-import Fondo1 from "../../public/assets/img/Fondos/Najuma1.jpg"
+import Fondo1 from "../../public/assets/img/Fondos/Teramal.jpeg"
 import Fondo2 from "../../public/assets/img/Fondos/Fondo2.jpg"
 import Fondo3 from "../../public/assets/img/Fondos/deposito.jpg"
 import Fondo4 from "../../public/assets/img/Fondos/Herramientas.jpg"

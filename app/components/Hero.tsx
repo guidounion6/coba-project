@@ -5,7 +5,7 @@ import NextVideo from 'next-video';
 import video2 from "../../videos/video5.mp4"
 import Loader from './Loader';
 
-import FondoHero from "../../public/assets/img/Fondos/Teramal.jpeg"
+import FondoHero from "../../public/assets/img/Fondos/TransporteCoba.jpg"
 import Image from "next/image";
 
 const Hero = () => {
