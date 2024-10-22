@@ -8,6 +8,7 @@ import Fondo2 from "../../public/assets/img/Fondos/costa mosaico.jpg"
 import Fondo3 from "../../public/assets/img/Fondos/deposito.jpg"
 import Fondo4 from "../../public/assets/img/Fondos/Herramientas.jpg"
 import Empresas from '../components/Empresas'
+import Footer from '../components/Footer'
 
 
 const HomePage = () => {
@@ -59,6 +60,7 @@ const HomePage = () => {
         </section>
         <Contact />
       </div>
+      <Footer />
     </nav>
   )
 }

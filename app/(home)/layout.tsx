@@ -19,7 +19,7 @@ const HomeLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
                     </div>
                 </section>
              </div>
-            <Footer />
+           
         </main>
     );
 }

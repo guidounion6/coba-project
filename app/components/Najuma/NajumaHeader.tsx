@@ -1,9 +1,25 @@
+import Button from "@/app/UI/Button";
+import Image from "next/image";
+import NajumaLogo from '../../../public/assets/img/Logos/Najuma-Logo.png'
+
+
 const NajumaHeader = () => (
-  <header className='bg-blue-600 flex'>
-    <div className='container mx-auto my-auto text-center flex flex-col justify-center items-center'>
-      <h2 className="text-4xl font-bold mb-4">Explore Our Heavy Mining Machines</h2>
-      <p className="text-lg mb-8">Discover the latest innovations in mining technology and soil engineering.</p>
-      <button className='bg-white px-6 py-3 rounded-lg shadow-md my-2'>Learn More</button>
+  <header className='bg-blue-500 container'>
+    <div className='mx-auto my-auto text-center flex justify-between items-center'>
+      <Image
+        alt='Logo de najuma'
+        src={NajumaLogo}
+        height={130}
+        width={130}
+      />
+      <div className="flex flex-col">
+        <h2 className="text-4xl font-bold my-4">Explore nuestras máquinas de minería pesada</h2>
+        <p className="text-lg mb-4">Descubra las últimas innovaciones en tecnología minera e ingeniería de suelos.</p>
+      </div>
+      <div>
+        <Button text={'Ver más'}
+        />
+      </div>
     </div>
   </header>
 );
