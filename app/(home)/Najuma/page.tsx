@@ -1,5 +1,7 @@
 
+"use client"
 import NajumaAbout from '@/app/components/Najuma/NajumaAbout';
+import NajumaCarousel from '@/app/components/Najuma/NajumaCarousel';
 import NajumaContact from '@/app/components/Najuma/NajumaContact';
 import NajumaFooter from '@/app/components/Najuma/NajumaFooter';
 import NajumaHeader from '@/app/components/Najuma/NajumaHeader';
@@ -17,7 +19,8 @@ const NajumaPage = () => (
       </div>
     </nav>
     <NajumaAbout />
-    <NajumaService/>
+    {/* <NajumaCarousel /> */}
+    <NajumaService />
     <NajumaContact />
     <NajumaFooter />
   </div>
