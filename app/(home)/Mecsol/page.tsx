@@ -1,20 +1,27 @@
-import React from 'react'
-import Image from 'next/image'
-import wok from "../../../public/assets/icons/work in progress.gif"
+'use client'
+import React, { useEffect } from 'react';
+
+import MecsolMain from '@/app/components/Mecsol/MecsolMain';
+import MecsolHeader from '@/app/components/Mecsol/MecsolHeader';
 
 const MecsolPage = () => {
-  return (
-    <section className='h-full w-full flex items-center justify-center'>
-      <div className='w-full h-full flex items-center justify-center'>
-      <Image 
-      src={wok}
-      alt="imagen de Work in progress"
-      width={500}
-      height={500}
-      />
-      </div>
-    </section>
-  )
-}
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href =
+      'https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900';
+    link.onload = () => (link.rel = 'stylesheet');
+    document.head.appendChild(link);
+  }, []);
 
-export default MecsolPage
+  return (
+    <div className="relative flex size-full min-h-screen flex-col bg-[#f8fafb] group/design-root overflow-x-hidden" style={{ fontFamily: '"Work Sans", "Noto Sans", sans-serif' }}>
+      <div className="layout-container flex h-full grow flex-col">
+        <MecsolHeader />
+        <MecsolMain />
+      </div>
+    </div>
+  );
+};
+
+export default MecsolPage;

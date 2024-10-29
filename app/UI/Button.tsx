@@ -8,7 +8,7 @@ interface ButtonProps {
 const Button = ({text, onclick} : ButtonProps) => {
   return (
     <div>
-        <button onClick={onclick} className='bg-white text-neutral-950 px-4 py-2 rounded-lg shadow-md'>
+        <button onClick={onclick} className='bg-white text-neutral-950 px-4 py-2 rounded-lg shadow-md hover:bg-slate-600'>
             {text}
         </button>
     </div>
