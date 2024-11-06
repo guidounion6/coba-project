@@ -1,4 +1,5 @@
 import MecsolAbout from "./MecsolAbout";
+import MecsolFooter from "./MecsolFooter";
 import MecsolHero from "./MecsolHero";
 import MecsolProducts from "./MecsolProducts";
 
@@ -8,6 +9,7 @@ const MecsolMain = () => (
         <MecsolHero />
         <MecsolProducts />
         <MecsolAbout />
+        <MecsolFooter />
       </div>
     </div>
   );

@@ -1,57 +1,86 @@
-import React from 'react';
+'use client'
 
+import * as React from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import { Button } from '@/components/ui/button'
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+export default function NajumaCarousel() {
+  const [api, setApi] = React.useState<any>()
+  const [current, setCurrent] = React.useState(0)
+  const [count, setCount] = React.useState(0)
 
-import image1 from '../../../public/assets/img/Fondos/Excabavoras.jpg';
-import image2 from '../../../public/assets/img/Fondos/Najuma1.jpg';
-import image3 from '../../../public/assets/img/Fondos/Najuma2.png';
-import image4 from '../../../public/assets/img/Fondos/Fondo4.jpg';
-import Image from 'next/image';
+  React.useEffect(() => {
+    if (!api) {
+      return
+    }
 
-const Array = [
-    { image: image1, title: "Excabavoras" },
-    { image: image2, title: "Najuma1" },
-    { image: image3, title: "Najuma2" },
-    { image: image4, title: "Fondo4" },
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
 
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
 
-]
+  const items = [
+    {
+      title: 'Slide 1',
+      description: 'This is the first slide of the carousel.',
+    },
+    {
+      title: 'Slide 2',
+      description: 'Here\'s the second slide with different content.',
+    },
+    {
+      title: 'Slide 3',
+      description: 'And this is the third and final slide.',
+    },
+  ]
 
-export function NajumaCarousel() {
-    return (
-        <div className='w-full h-full flex flex-row justify-center items-center py-2'>
-            <Carousel 
-             opts={{
-                align: "start",
-                loop: true,
-              }}
-            className="w-full max-w-xs">
-                <CarouselContent>
-                    {Array.map((item, index: number) => (
-                        <CarouselItem key={index}>
-                            <div className="p-1">
-                                <Card>
-                                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                                        <Image
-                                            src={item.image}
-                                            alt={item.title}
-                                            width={500}
-                                            height={500}
-                                            objectFit='cover'
-                                        />
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel>
-        </div>
-    )
+  return (
+    <div className="w-full max-w-xs mx-auto">
+      <Carousel setApi={setApi} className="w-full">
+        <CarouselContent>
+          {items.map((item, index) => (
+            <CarouselItem key={index}>
+              <Card>
+                <CardContent className="flex flex-col items-center justify-center p-6">
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-center text-sm text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+      <div className="py-2 text-center text-sm text-muted-foreground">
+        Slide {current} of {count}
+      </div>
+      <div className="flex justify-center gap-2 py-2">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => api?.scrollPrev()}
+        >
+          Previous
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => api?.scrollNext()}
+        >
+          Next
+        </Button>
+      </div>
+    </div>
+  )
 }
-
-export default NajumaCarousel
