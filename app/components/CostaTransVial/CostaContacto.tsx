@@ -1,27 +1,10 @@
-'use client'
+import { Button } from '@/components/ui/button'
+import { Mail, MapPin, Phone } from 'lucide-react'
+import React from 'react'
 
-import CostaAbout from "@/app/components/CostaTransVial/Costabout"
-import CostaFooter from "@/app/components/CostaTransVial/CostaFooter"
-import CostaHeader from "@/app/components/CostaTransVial/CostaHeader"
-import CostaHero from "@/app/components/CostaTransVial/CostaHero"
-import CostaProyectos from "@/app/components/CostaTransVial/CostaProyectos"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Building2, ChevronLeft, ChevronRight, Mail, MapPin, Phone } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-
-
-const  CostaPage =  () => {
-
+const CostaContacto = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white">
-      <CostaHeader />
-      <main className="flex-1">
-        <CostaHero />
-        <CostaAbout />
-        <CostaProyectos />
-        <section id="contacto" className="w-full py-12 md:py-24 lg:py-32 bg-[#F0F8FF]">
+    <section id="contacto" className="w-full py-12 md:py-24 lg:py-32 bg-[#F0F8FF]">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-[#4682B4]">Contáctanos</h2>
             <div className="grid gap-6 lg:grid-cols-2">
@@ -49,10 +32,7 @@ const  CostaPage =  () => {
             </div>
           </div>
         </section>
-      </main>
-      <CostaFooter />
-    </div>
   )
 }
 
-export default CostaPage
+export default CostaContacto

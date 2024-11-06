@@ -34,7 +34,7 @@ const CostaHero = () => {
                 <Image
                     src={carouselImages[currentImage].src}
                     alt={carouselImages[currentImage].alt}
-                    layout="fill"
+                    layout='fill'
                     objectFit="cover"
                     priority
                 />
@@ -51,8 +51,10 @@ const CostaHero = () => {
                         </p>
                     </div>
                     <div className="space-x-4">
-                        <Button className="bg-[#4682B4] text-white hover:bg-[#5A95C2]">Nuestros Proyectos</Button>
-                        <Button className=" bg-[#4682B4] text-white border-white hover:bg-white hover:text-[#4682B4]">
+                        <Button className="bg-[#4682B4] text-white border-white hover:bg-white hover:text-[#4682B4]">
+                            Nuestros Proyectos
+                        </Button>
+                        <Button className="bg-[#4682B4] text-white border-white hover:bg-white hover:text-[#4682B4]">
                             Contáctanos
                         </Button>
                     </div>
