@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
@@ -51,12 +52,16 @@ const CostaHero = () => {
                         </p>
                     </div>
                     <div className="space-x-4">
-                        <Button className="bg-[#4682B4] text-white border-white hover:bg-white hover:text-[#4682B4]">
-                            Nuestros Proyectos
-                        </Button>
-                        <Button className="bg-[#4682B4] text-white border-white hover:bg-white hover:text-[#4682B4]">
-                            Contáctanos
-                        </Button>
+                        <a href="#proyectos">
+                            <Button className="bg-[#4682B4] text-white border-white hover:bg-white hover:text-[#4682B4]">
+                                Nuestros Proyectos
+                            </Button>
+                        </a>
+                        <a href="#contacto">
+                            <Button className="bg-[#4682B4] text-white border-white hover:bg-white hover:text-[#4682B4]">
+                                Contáctanos
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </div>

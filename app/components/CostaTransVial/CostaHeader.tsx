@@ -10,7 +10,7 @@ const CostaHeader = () => {
           <span className="ml-2 text-lg font-bold text-white">Costa Trans Vial</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:text-[#4682B4] transition-colors" href="#inicio">
+          <Link className="text-sm font-medium hover:text-[#4682B4] transition-colors" href="/">
             Inicio
           </Link>
           <Link className="text-sm font-medium hover:text-[#4682B4] transition-colors" href="#acerca">

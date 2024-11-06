@@ -18,8 +18,8 @@ const NajumaPage = () => (
         <NajumaHeader />
       </div>
     </nav>
+    <NajumaCarousel />
     <NajumaAbout />
-    {/* <NajumaCarousel /> */}
     <NajumaService />
     <NajumaContact />
     <NajumaFooter />
